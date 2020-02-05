@@ -10,7 +10,7 @@ namespace Modul001_1_HalloWelt
     {
         static void Main(string[] args)
         {
-
+            //sdfasdfasdfasdf
             Console.OutputEncoding = Encoding.UTF8;
 
             #region Beispiel1: Hallo Welt
@@ -92,12 +92,11 @@ namespace Modul001_1_HalloWelt
             float result2 = float.Parse("3.5");
             int result3 = (int)doubleValue; 
 
-            
-
-
-
             Console.WriteLine($"Ausgabe1 mit Convert.ToInt32 = {result1}");
             Console.WriteLine($"Ausgabe3 mit direkter Konventierung = {result3}");
+
+
+            
 
             Console.ReadKey();
 
