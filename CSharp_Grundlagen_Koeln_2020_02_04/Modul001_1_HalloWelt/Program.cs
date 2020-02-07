@@ -60,6 +60,18 @@ namespace Modul001_1_HalloWelt
             Console.ReadKey();
 
 
+            string merhteiligerText = "Hallo" + "Liebe Teilnehmer" + "Danke" + "das" + "ihr" + "da" + "wart";
+
+            // Performantere Weg
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Hallo ");
+            sb.Append(" liebe ");
+            sb.Append("Teilnehmer ");
+            sb.Append(" Danke ");
+            sb.Append("das ");
+            sb.Append(" ... ");
+
+            sb.ToString();
 
             Console.WriteLine("----- Ausgaben von String ------");
             string vorname = "Max";

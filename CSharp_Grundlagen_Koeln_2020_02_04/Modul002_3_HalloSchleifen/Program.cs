@@ -20,23 +20,41 @@ namespace Modul002_3_HalloSchleifen
             }
             sw.Close();
 
-            StreamReader sr = new StreamReader("zahlen.txt");
-            int summe = 0;
-
-            //while + tab + tab ->shortcut
-
-            //sr.EndOfStream -> lese ein, bis das Ende erreicht ist.
-            // In unserem Fall. Das Dateiende
-            while (!sr.EndOfStream)
+            StreamReader sr = null;
+            try
             {
-                string line = sr.ReadLine();
-                Console.WriteLine(line);
+                sr = new StreamReader("zahlen.txt");
+                int summe = 0;
 
-                summe += int.Parse(line);
+                //while + tab + tab ->shortcut
+
+                //sr.EndOfStream -> lese ein, bis das Ende erreicht ist.
+                // In unserem Fall. Das Dateiende
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    Console.WriteLine(line);
+
+                    summe += int.Parse(line);
+                }
+
+                Console.WriteLine(summe);
+                
+            }
+            catch (FileNotFoundException ex)
+            {
+                // Log 
+            }
+            finally
+            {
+                sr.Close();
             }
 
-            Console.WriteLine(summe);
-            sr.Close();
+            using (StreamReader sr2 = new StreamReader("leseAuseinerDatei.txt"))
+            {
+                string line = sr.ReadLine();
+            }
+            
 
             //do
             //{
